@@ -1,0 +1,30 @@
+---
+section: trident-install
+title: Installer Trident
+entries:
+- title: Aperçu de l'installation
+  url: "/trident-get-started/kubernetes-deploy.html"
+- title: Installer à l'aide de l'opérateur Trident
+  entries:
+  - title: Déployez manuellement l’opérateur Trident (Standard)
+    url: "/trident-get-started/kubernetes-deploy-operator.html"
+  - title: Déployez manuellement l’opérateur Trident (hors ligne)
+    url: "/trident-get-started/kubernetes-deploy-operator-mirror.html"
+  - title: Utiliser le Helm Chart Trident (Standard)
+    url: "/trident-get-started/kubernetes-deploy-helm.html"
+  - title: Utiliser le Helm Chart Trident (hors ligne)
+    url: "/trident-get-started/kubernetes-deploy-helm-mirror.html"
+  - title: Personnaliser l'installation de l'opérateur Trident
+    url: "/trident-get-started/kubernetes-customize-deploy.html"
+- title: Installer à l'aide de tridentctl
+  entries:
+  - title: Installer à l'aide de tridentctl
+    url: "/trident-get-started/kubernetes-deploy-tridentctl.html"
+  - title: Personnaliser l'installation de tridentctl
+    url: "/trident-get-started/kubernetes-customize-deploy-tridentctl.html"
+- title: Installer à l'aide de l'opérateur certifié OpenShift
+  entries:
+  - title: Installer Trident à l'aide de OpenShift OperatorHub
+    url: "/trident-get-started/openshift-operator-deploy.html"
+  - title: Passez de l’opérateur communautaire Trident à l’opérateur certifié OpenShift
+    url: "/trident-get-started/openshift-certified-operator-deploy.html"

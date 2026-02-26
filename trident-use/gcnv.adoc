@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: trident-use/gcnv.html 
+keywords: trident backend, google cloud netapp volumes, nfs volumes, nfs, drivers, access modes, rwo, rwx, rwp, rwop, file system, gke, cloud identity, google cloud 
+summary:  
+---
+= Configurer un backend Google Cloud NetApp Volumes
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez désormais configurer Google Cloud NetApp Volumes comme backend pour Trident. Vous pouvez connecter des volumes NFS et SMB à l'aide d'un backend Google Cloud NetApp Volumes.
+
+
+
+== Détails du pilote Google Cloud NetApp Volumes
+
+Trident fournit le `google-cloud-netapp-volumes` driver pour communiquer avec le cluster. Les modes d'accès pris en charge sont : _ReadWriteOnce_ (RWO), _ReadOnlyMany_ (ROX), _ReadWriteMany_ (RWX), _ReadWriteOncePod_ (RWOP).
+
+[cols="2, 1, 1, 2, 2"]
+|===
+| Pilote | Protocole | volumeMode | Modes d'accès pris en charge | Systèmes de fichiers pris en charge 
+
+
+| `google-cloud-netapp-volumes`  a| 
+NFS SMB
+ a| 
+Système de fichiers
+ a| 
+RWO, ROX, RWX, RWOP
+ a| 
+`nfs`, `smb`
+
+|===
+
+
+== Identité cloud pour GKE
+
+L'identité cloud permet aux pods Kubernetes d'accéder aux ressources Google Cloud en s'authentifiant en tant qu'identité de charge de travail au lieu de fournir des informations d'identification Google Cloud explicites.
+
+Pour tirer parti de l'identité cloud dans Google Cloud, vous devez avoir :
+
+* Un cluster Kubernetes déployé à l'aide de GKE.
+* L'identité de la charge de travail est configurée sur le cluster GKE et le serveur GKE MetaData est configuré sur les pools de nœuds.
+* Un compte de service GCP avec le rôle Google Cloud NetApp Volumes Admin (roles/netapp.admin) ou un rôle personnalisé.
+* Trident installé qui inclut le cloudProvider pour spécifier « GCP » et cloudIdentity spécifiant le nouveau compte de service GCP. Un exemple est donné ci-dessous.
++
+[role="tabbed-block"]
+====
+.Opérateur Trident
+--
+Pour installer Trident à l'aide de l'opérateur Trident, modifiez  `tridentorchestrator_cr.yaml` pour définir  `cloudProvider` sur  `"GCP"` et définissez  `cloudIdentity` sur  `iam.gke.io/gcp-service-account: \cloudvolumes-admin-sa@mygcpproject.iam.gserviceaccount.com`.
+
+Par exemple :
+
+[source, yaml]
+----
+apiVersion: trident.netapp.io/v1
+kind: TridentOrchestrator
+metadata:
+  name: trident
+spec:
+  debug: true
+  namespace: trident
+  imagePullPolicy: IfNotPresent
+  cloudProvider: "GCP"
+  cloudIdentity: 'iam.gke.io/gcp-service-account: cloudvolumes-admin-sa@mygcpproject.iam.gserviceaccount.com'
+----
+--
+.Helm
+--
+Définissez les valeurs des indicateurs *cloud-provider (CP)* et *cloud-identity (CI)* à l'aide des variables d'environnement suivantes :
+
+`export CP="GCP"`
+`export ANNOTATION="'iam.gke.io/gcp-service-account: \cloudvolumes-admin-sa@mygcpproject.iam.gserviceaccount.com'"`
+
+L'exemple suivant installe Trident et définit  `cloudProvider` sur GCP à l'aide de la variable d'environnement  `$CP` et définit le  `cloudIdentity` à l'aide de la variable d'environnement  `$ANNOTATION` :
+
+[listing]
+----
+helm install trident trident-operator-100.6.0.tgz --set cloudProvider=$CP --set cloudIdentity="$ANNOTATION"
+----
+--
+.<code>tridentctl</code>
+--
+Définissez les valeurs des indicateurs *cloud provider* et *cloud identity* à l'aide des variables d'environnement suivantes :
+
+`export CP="GCP"`
+`export ANNOTATION="'iam.gke.io/gcp-service-account: \cloudvolumes-admin-sa@mygcpproject.iam.gserviceaccount.com'"`
+
+L'exemple suivant installe Trident et définit le  `cloud-provider` indicateur sur  `$CP`, et  `cloud-identity` sur  `$ANNOTATION` :
+
+[listing]
+----
+tridentctl install --cloud-provider=$CP --cloud-identity="$ANNOTATION" -n trident
+----
+--
+====
+
