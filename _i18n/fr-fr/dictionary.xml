@@ -6085,4 +6085,5 @@
   <block id="e8ce47501426b8525633fc30daf17d7a" category="sidebar">Personnalisez les noms de volume</block>
   <block id="f18a50f02f48551895d57b81dd288142" category="sidebar">Partager des volumes NFS entre espaces de noms</block>
   <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">Utilisez des instantanés</block>
+  <block id="f45ace2e96672a5ca55ea6bac48b9865" category="admonition">##Si votre application utilise plusieurs espaces de noms et que ces espaces de noms contiennent des PVC portant le même nom, les opérations de restauration d'instantané (sur place et vers un nouvel espace de noms) ne fonctionneront pas correctement. Tous les volumes restaurés contiendront les mêmes données au lieu des données correctes pour chaque espace de noms. Utilisez la restauration de sauvegarde plutôt que la restauration d'instantané, ou mettez à niveau vers la version 26.02 ou ultérieure qui corrige ce problème.##</block>
 </blocks>
