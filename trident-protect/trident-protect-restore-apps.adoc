@@ -537,7 +537,7 @@ tridentctl-protect create snapshotrestore <my_restore_name> \
 Vous pouvez restaurer un instantané dans l'espace de noms d'origine à tout moment.
 
 
-NOTE: ##Si votre application utilise plusieurs espaces de noms et que ces espaces de noms contiennent des PVC portant le même nom, les opérations de restauration d'instantané (sur place et vers un nouvel espace de noms) ne fonctionneront pas correctement. Tous les volumes restaurés contiendront les mêmes données au lieu des données correctes pour chaque espace de noms. Utilisez la restauration de sauvegarde plutôt que la restauration d'instantané, ou mettez à niveau vers la version 26.02 ou ultérieure qui corrige ce problème.##
+NOTE: Si votre application utilise plusieurs espaces de noms et que ces espaces de noms contiennent des PVC portant le même nom, les opérations de restauration d'instantané (sur place et vers un nouvel espace de noms) ne fonctionneront pas correctement. Tous les volumes restaurés auront les mêmes données au lieu des données correctes pour chaque espace de noms. Utilisez la restauration de sauvegarde plutôt que la restauration d'instantané, ou effectuez une mise à niveau vers la version 26.02 ou ultérieure qui corrige ce problème.
 
 .Avant de commencer
 Assurez-vous que la durée de validité du jeton de session AWS est suffisante pour toute opération de restauration s3 de longue durée. Si le jeton expire pendant l'opération de restauration, l'opération peut échouer.
