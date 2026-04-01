@@ -1,5 +1,13 @@
 ---
 indexpage:
+  title: Documentation Trident 25.10
+  summary: Trident est un outil open source de provisionnement et d'orchestration
+    de stockage maintenu par NetApp. Il permet de créer des volumes de stockage pour
+    les applications conteneurisées gérées par Docker et Kubernetes. **Consultez les
+    notes de version pour obtenir des informations essentielles concernant la mise
+    à niveau vers Trident 25.10.**
+  keywords: trident, documentation, trident release notes, get started, deploy, upgrade,
+    use, trident protect, 2510, 25.10
   lead: Trident est un outil open source de provisionnement et d'orchestration de
     stockage maintenu par NetApp. Il permet de créer des volumes de stockage pour
     les applications conteneurisées gérées par Docker et Kubernetes.
@@ -8,8 +16,6 @@ indexpage:
     links:
     - title: Quoi de neuf
       url: trident-rn.html
-    - title: Versions antérieures
-      url: "/earlier-versions.html"
     - title: Prise en charge de Trident pour les systèmes de stockage ASA r2
       url: "/trident-asar2-support.html"
   - title: Commencer

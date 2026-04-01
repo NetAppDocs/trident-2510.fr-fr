@@ -33,7 +33,7 @@ Autonomie:: La documentation Trident est disponible pour les mois 25 à 36 à co
 
 
  a| 
-link:https://docs.netapp.com/us-en/trident/index.html["25,10"^]
+link:https://docs.netapp.com/us-en/trident-2510/index.html["25,10"^]
 | Octobre 2026 | Octobre 2027 | Octobre 2028 
 
 
