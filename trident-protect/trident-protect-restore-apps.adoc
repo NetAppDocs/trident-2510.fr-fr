@@ -332,8 +332,11 @@ L'exécution de cette commande affiche les sauvegardes disponibles dans le AppVa
 | production1 | wordpress | backup | wordpress-bkup-2| 2024-10-30 08:37:40 (UTC)| backuppath2 |
 +-------------+-----------+--------+-----------------+--------------------------+-------------+
 ----
-. Restaurez l'application sur le cluster de destination en utilisant le nom AppVault et le chemin d'accès à l'archive : REMARQUE : Lorsque vous utilisez une CR, assurez-vous que l'espace de noms destiné à la restauration de l'application existe sur le cluster de destination.
+. Restaurez l'application sur le cluster de destination en utilisant le nom AppVault et le chemin d'accès à l'archive :
 
+
+
+NOTE: Lors de l'utilisation d'une CR, assurez-vous que l'espace de noms destiné à la restauration de l'application existe sur le cluster de destination.
 
 [role="tabbed-block"]
 ====
