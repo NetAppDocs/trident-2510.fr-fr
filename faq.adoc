@@ -62,7 +62,7 @@ Non. L'expérience utilisateur et les fonctionnalités restent inchangées. Le n
 
 === Trident prend-il en charge une installation hors ligne à partir d'un registre privé ?
 
-Oui, Trident peut être installé hors ligne. Voir link:../trident-get-started/kubernetes-deploy.html["Découvrez l'installation de Trident"^].
+Oui, Trident peut être installé hors ligne. Reportez-vous à link:trident-install/kubernetes-deploy.html["Découvrez l'installation de Trident"].
 
 
 
@@ -86,13 +86,13 @@ Trident lit à partir du serveur d'API Kubernetes pour déterminer quand les app
 
 === Quels sont les rôles et privilèges utilisés par Trident ?
 
-L'installateur Trident crée un ClusterRole Kubernetes, qui dispose d'un accès spécifique aux ressources PersistentVolume, PersistentVolumeClaim, StorageClass et Secret du cluster Kubernetes. Reportez-vous à link:trident-get-started/kubernetes-customize-deploy-tridentctl.html["Personnaliser l'installation de tridentctl"^].
+L'installateur Trident crée un ClusterRole Kubernetes, qui dispose d'un accès spécifique aux ressources PersistentVolume, PersistentVolumeClaim, StorageClass et Secret du cluster Kubernetes. Reportez-vous à link:trident-install/kubernetes-customize-deploy-tridentctl.html["Personnaliser l'installation de tridentctl"].
 
 
 
 === Puis-je générer localement les fichiers manifestes exacts que Trident utilise pour l'installation ?
 
-Vous pouvez générer et modifier localement les fichiers manifestes exacts utilisés par Trident pour l'installation, si nécessaire. Consultez link:trident-get-started/kubernetes-customize-deploy-tridentctl.html["Personnaliser l'installation de tridentctl"^].
+Vous pouvez générer et modifier localement les fichiers manifestes exacts utilisés par Trident pour l'installation, si nécessaire. Reportez-vous à link:trident-install/kubernetes-customize-deploy-tridentctl.html["Personnaliser l'installation de tridentctl"].
 
 
 

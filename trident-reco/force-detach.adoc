@@ -150,7 +150,7 @@ Les TNR peuvent se trouver dans l'un des états suivants :
 
 
 
-NOTE: Vous pouvez également utiliser d'autres méthodes pour détecter les défaillances de nœud, comme spécifié dans la section <<Integrating Custom Node Health Check Solutions>> ci-dessous.
+NOTE: Vous pouvez également utiliser d'autres méthodes pour détecter les défaillances de nœud, comme spécifié dans la section link:..trident-reco/force-detach.html#integrating-custom-node-health-check-solutions["Intégration de solutions personnalisées de vérification de l'état des nœuds"] ci-dessous.
 
 Voir link:https://www.redhat.com/en/blog/node-health-check-operator["Opérateur de vérification de l'état des nœuds"^] pour plus d'informations.
 

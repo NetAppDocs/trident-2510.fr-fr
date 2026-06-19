@@ -29,9 +29,9 @@ indexpage:
   - title: Déployer Trident
     links:
     - title: Déployez avec l’opérateur Trident
-      url: "/trident-get-started/kubernetes-deploy-operator.html"
+      url: "/trident-install/kubernetes-deploy-operator.html"
     - title: Déployer avec tridentctl
-      url: "/trident-get-started/kubernetes-deploy-tridentctl.html"
+      url: "/trident-install/kubernetes-deploy-tridentctl.html"
     - title: Déployer Trident pour Docker
       url: "/trident-docker/deploy-docker.html"
   - title: Mettre à niveau Trident

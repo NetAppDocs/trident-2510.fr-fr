@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: trident-get-started/kubernetes-deploy-helm-mirror.html 
+permalink: trident-install/kubernetes-deploy-helm-mirror.html 
 keywords: deploy, Trident, operator, helm, helm chart, configuration, values, offline, air gap, gap, registry 
 summary: 'Vous pouvez déployer l"opérateur Trident et installer Trident à l"aide de Helm. Ce processus s"applique aux installations où les images de conteneur requises par Trident sont stockées dans un registre privé.' 
 ---
@@ -38,12 +38,12 @@ L'utilisation d'une configuration sans multipath ou l'utilisation de `find_multi
 
 == Déployez l’opérateur Trident et installez Trident à l’aide de Helm
 
-À l'aide de Trident link:https://netapp.github.io/trident-helm-chart["Graphique Helm"^] vous pouvez déployer l'opérateur Trident et installer Trident en une seule étape.
+Avec Trident link:https://artifacthub.io/packages/helm/netapp-trident/trident-operator["Graphique Helm"^] vous pouvez déployer l'opérateur Trident et installer Trident en une seule étape.
 
-Vérifiez link:../trident-get-started/kubernetes-deploy.html["aperçu de l'installation"] pour vous assurer que vous avez respecté les prérequis d'installation et sélectionné la bonne option d'installation pour votre environnement.
+Vérifiez link:../trident-install/kubernetes-deploy.html["aperçu de l'installation"] pour vous assurer que vous avez respecté les prérequis d'installation et sélectionné la bonne option d'installation pour votre environnement.
 
 .Avant de commencer
-En plus de link:../trident-get-started/kubernetes-deploy.html#before-you-deploy["prérequis de déploiement"] vous avez besoin de link:https://v3.helm.sh/["Helm version 3"^].
+En plus de link:../trident-install/kubernetes-deploy.html#before-you-deploy["prérequis de déploiement"] vous avez besoin de link:https://v3.helm.sh/["Helm version 3"^].
 
 
 IMPORTANT: Lors de l'installation de Trident dans un dépôt privé, si vous utilisez le  `imageRegistry` commutateur pour spécifier l'emplacement du dépôt, n'utilisez pas  `/netapp/` dans le chemin du dépôt.

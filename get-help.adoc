@@ -107,5 +107,5 @@ Pour obtenir de l'aide concernant Trident, créez un dossier de support à l'aid
 == Pour plus d'informations
 
 * link:https://github.com/NetApp/trident["Ressources Trident"^]
-* link:https://cloud.netapp.com/kubernetes-hub["Hub Kubernetes"^]
+* link:https://www.netapp.com/console/["Hub Kubernetes"^]
 
