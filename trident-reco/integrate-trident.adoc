@@ -108,7 +108,7 @@ Note de bas de page : Ouifootnote:1[] : Non géré par Trident Ouifootnote:2[]
 
 === Pilotes backend Azure NetApp Files
 
-Trident utilise le  `azure-netapp-files` driver pour gérer le link:https://azure.microsoft.com/en-us/services/netapp/["Azure NetApp Files"^] service.
+Trident utilise le  `azure-netapp-files` driver pour gérer le link:https://azure.microsoft.com/en-us/products/netapp/["Azure NetApp Files"^] service.
 
 Vous trouverez plus d'informations sur ce pilote et sur la manière de le configurer dans link:https://docs.netapp.com/us-en/trident/trident-use/anf.html["Configuration du backend Trident pour Azure NetApp Files"^].
 

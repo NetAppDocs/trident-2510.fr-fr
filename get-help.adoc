@@ -75,11 +75,6 @@ link:https://docs.netapp.com/us-en/trident-2307/index.html["23,07"^]
  a| 
 link:https://docs.netapp.com/us-en/trident-2304/index.html["23,04"^]
 | -- | -- | Avril 2026 
-
-
- a| 
-link:https://docs.netapp.com/us-en/trident-2301/index.html["23,01"^]
-| -- | -- | Janvier 2026 
 |===
 
 NOTE: Pour connaître le calendrier de prise en charge de la dernière version de Trident, veuillez vous référer au https://docs.netapp.com/us-en/trident/get-help.html#trident-support-lifecycle["Page du cycle de vie du support"].
