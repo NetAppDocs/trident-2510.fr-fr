@@ -16,6 +16,7 @@ Découvrez les options de configuration du backend pour Amazon FSx for ONTAP. Ce
 
 
 
+[[backend-configuration-options]]
 == Options de configuration du backend
 
 Consultez le tableau suivant pour les options de configuration du backend :
@@ -108,6 +109,7 @@ Consultez le tableau suivant pour les options de configuration du backend :
 |===
 
 
+[[update-datalif-after-initial-configuration]]
 === Mise à jour `dataLIF` après la configuration initiale
 
 Vous pouvez modifier le dataLIF après la configuration initiale en exécutant la commande suivante pour fournir le nouveau fichier JSON backend avec le dataLIF mis à jour.
@@ -121,6 +123,7 @@ NOTE: Si des PVC sont connectés à un ou plusieurs pods, vous devez mettre hors
 
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == Options de configuration backend pour le provisionnement des volumes
 
 Vous pouvez contrôler le provisionnement par défaut à l'aide de ces options dans la section  `defaults` de la configuration. Pour un exemple, consultez les exemples de configuration ci-dessous.
@@ -154,7 +157,7 @@ Vous pouvez contrôler le provisionnement par défaut à l'aide de ces options d
 | `encryption` | Activez le chiffrement de volume NetApp (NVE) sur le nouveau volume ; la valeur par défaut est  `false`. NVE doit être sous licence et activé sur le cluster pour utiliser cette option. Si NAE est activé sur le backend, tout volume provisionné dans Trident sera activé pour NAE. Pour plus d'informations, consultez : link:../trident-reco/security-reco.html["Comment Trident fonctionne avec NVE et NAE"]. | `false` 
 
 
-| `luksEncryption` | Activer le chiffrement LUKS. Voir link:../trident-reco/security-reco.html#Use-Linux-Unified-Key-Setup-(LUKS)["Utilisez Linux Unified Key Setup (LUKS)"]. SAN uniquement. | "" 
+| `luksEncryption` | Activez le chiffrement LUKS. Consultez link:../trident-reco/security-luks.html["Utilisez Linux Unified Key Setup (LUKS)"]. SAN uniquement. | "" 
 
 
 | `tieringPolicy` | Politique de hiérarchisation à utiliser	`none` |  
@@ -167,6 +170,7 @@ Vous pouvez contrôler le provisionnement par défaut à l'aide de ces options d
 |===
 
 
+[[example-configurations]]
 == Exemples de configurations
 
 .Configuration de la classe de stockage pour les volumes SMB
